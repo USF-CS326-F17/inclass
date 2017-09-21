@@ -12,12 +12,12 @@ void read_line(char *line)
     int i = 0;
     
     while(read(0, buf, 1) > 0) {
-        line[i] = buf[0];
-        i = i + 1;
-
-        if (line[i-1] == '\n') {
+        if (buf[0] == '\n') {
             break;
         }
+
+        line[i] = buf[0];
+        i = i + 1;
 
         if (i > (MAX_CMD_LEN - 1)) {
             break;
