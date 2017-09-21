@@ -11,7 +11,6 @@ extern void exit(int);
 struct server_node {
     struct list_elem elem;
     char name[MAX_STR_LEN];
-    int pfd[2];
 };
 
 struct list server_list;
