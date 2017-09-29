@@ -6,9 +6,9 @@ void parse_command_line(char *buf, char **args)
 {
     int i = 0;
     
-    args[i] = strtok(buf, " ");
+    args[i] = strtok(buf, " \n");
     i = i + 1;
-    while ((args[i] = strtok(NULL, " ")) != NULL) {
+    while ((args[i] = strtok(NULL, " \n")) != NULL) {
         i = i + 1;
     }
 }

@@ -1,4 +1,5 @@
-PROGS = redirect2 pipe pipe_bad pipe_exec pipe_pcc fork_many mish nish read
+PROGS = redirect2 pipe pipe_bad pipe_exec pipe_pcc fork_many mish nish read \
+        readdir usfls
 
 all : ${PROGS}
 
@@ -28,6 +29,12 @@ nish : nish.c prompt.h prompt.c parse.h parse.c commands.h commands.c
 
 read : read.c
 	gcc -o read read.c
+
+readdir : readdir.c
+	gcc -o readdir readdir.c
+
+usfls : usfls.c
+	gcc -o usfls usfls.c
 
 clean :
 	rm -rf ${PROGS}
